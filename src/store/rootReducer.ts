@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import todoReducer from './todo/reducer';
+import historyReducer from './history/reducer';
+import homeReducer from './home/reducer';
 
 const rootReducer = combineReducers({
-  todo: todoReducer,
+  history: historyReducer,
+  home: homeReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

@@ -1,4 +1,35 @@
 // The official css-module README recommends using the camelCase naming convention
+@import 'styles/variables';
+
 .headColor {
   color: rgb(25, 0, 255);
+}
+
+.homeSection {
+  .parentRow {
+    .buttonSection {
+      .viewHistory {
+        background-color: $white !important;
+        color: $primary;
+        border-color: $primary !important;
+        border-width: 3px;
+        border-radius: 10px;
+      }
+    }
+    .searchSection {
+      .searchIcon {
+        right: 20px;
+        top: 7px;
+        color: $lite-gray;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .viewHistory {
+    width: 100%;
+    margin-top: 10px;
+  }
 }

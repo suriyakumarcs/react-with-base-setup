@@ -1,3 +1,25 @@
+@import 'styles/variables';
+
 .link {
   color: rgb(255, 0, 200);
+}
+
+.headerParent {
+  background-color: $primary;
+  .headerRow {
+    min-height: 5rem;
+    .rightCol {
+      .header {
+        margin-left: 10px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 20px;
+        min-height: 65px;
+      }
+    }
+    .leftCol {
+      font-size: 25px;
+      color: #ffffff;
+    }
+  }
 }

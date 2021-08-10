@@ -1,8 +1,8 @@
-import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './containers/home/Home';
-import Todo from './containers/todo/Todo';
+import History from './containers/history/History';
 import Header from './components/header/Header';
+import Loader from './components/loader/Loader';
 
 import './App.scss';
 
@@ -11,14 +11,17 @@ const App = () => {
     <Router>
       <div className="app-container">
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Todo />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-        </Switch>
+        <Loader />
+        <div className="container m-t-30px">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/history">
+              <History />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

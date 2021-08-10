@@ -1,0 +1,16 @@
+@import 'styles/variables';
+
+.customButton {
+  background-color: $primary !important;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  width: 85%;
+  top: 1px;
+}
+
+@media screen and (max-width: 575px) {
+  .customButton {
+    width: 100%;
+  }
+}
